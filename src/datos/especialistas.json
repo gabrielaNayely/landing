@@ -18,5 +18,25 @@
         "img": "/especialistas/especialista.jpg",
         "nombre": "Dr. Nombre Apellido",
         "especialidad": "Ortodoncia"
+    },
+    {
+        "img": "/especialistas/especialista.jpg",
+        "nombre": "Dr. Nombre Apellido",
+        "especialidad": "Ortodoncia"
+    },
+    {
+        "img": "/especialistas/especialista.jpg",
+        "nombre": "Dr. Nombre Apellido",
+        "especialidad": "Ortodoncia"
+    },
+    {
+        "img": "/especialistas/especialista.jpg",
+        "nombre": "Dr. Nombre Apellido",
+        "especialidad": "Ortodoncia"
+    },
+    {
+        "img": "/especialistas/especialista.jpg",
+        "nombre": "Dr. Nombre Apellido",
+        "especialidad": "Ortodoncia"
     }
 ]

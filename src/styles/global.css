@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 
+@tailwind utilities;
+
+
 @theme {
     --color-azulprim: #277BB1;
+    --color-celesteprim: #D2E0E9;
 }
 
 html {
@@ -11,6 +15,8 @@ html {
 
 body {
     background: rgb(95, 95, 95);
+    font-family: 'Nunito Sans', sans-serif;
+
 }
 
 @keyframes appear {

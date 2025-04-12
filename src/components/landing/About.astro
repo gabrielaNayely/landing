@@ -1,56 +1,76 @@
 ---
-import especialistas from '../../datos/especialistas.json'
+import especialistas from "../../datos/especialistas.json";
+
+const destacados = especialistas.slice(0, 4)
 ---
 
-<section id="nosotros" class="bg-white">
-    
-    <div class="py-8 px-14 md:px-36">
-        <div class="animation text-center">
-            <h1 class="text-2xl font-bold text-azulprim p-1">NOSOTROS</h1>
-            <p class="py-3">Nuestro equipo de expertos está aquí para atenderte con la atención personalizada y profesional que mereces.</p>
-            <div class="flex flex-wrap py-3 justify-center items-center gap-6 ">
-                <img src="/about.jpg" alt="Nosotros" class="rounded-2xl w-80 md:justify-self-center">
-                <p class="flex items-center md:w-full md:text-justify lg:pr-14">
-                    En Onix Dent, creemos que una sonrisa saludable transforma vidas. Nuestro equipo de odontólogos altamente capacitados trabaja con tecnología avanzada y los mejores materiales para brindarte el mejor cuidado dental.
-                </p>
-            </div>
+<section id="nosotros" class="bg-celesteprim">
 
-        </div>
+  <div class="py-8 px-14 md:px-36">
+    <div class="animation text-center px-4 py-6">
+      <h1 class="text-2xl font-bold text-azulprim mb-4">NOSOTROS</h1>
+      <p class="text-base mb-6">
+        Nuestro equipo está listo para recibirte con atención personalizada y
+        profesional, porque tu sonrisa lo merece.
+      </p>
 
-        <div class="mt-6 text-center">
-            <div class="animation">
-                <h1 class="text-2xl font-bold text-azulprim ">Nuestros Especialistas</h1>
-                <p class="my-4">Nuestra clínica dental ofrece una amplia gama de servicios de alta calidad para satisfacer todas tus necesidades dentales. Algunos de nuestros servicios más destacados incluyen:</p>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-6 p-4 sm:px-10">
-                {
-                  especialistas.map((especialista) => (
-                    <div class="bg-gray-200 rounded-2xl shadow-md overflow-hidden w-64 flex flex-col items-center p-4 transition-transform hover:scale-[1.02] duration-300">
-              
-                      {/* Imagen con proporción, padding y borde redondeado */}
-                      <div class="w-full aspect-[3/4]">
-                        <img 
-                          src={especialista.img} 
-                          alt="Especialista" 
-                          class="w-full h-full object-cover rounded-xl"
-                        />
-                      </div>
-              
-                      {/* Nombre y especialidad */}
-                      <div class="mt-4 text-center">
-                        <h2 class="text-azulprim text-lg font-bold">{especialista.nombre}</h2>
-                        <p class="text-gray-700 text-sm">{especialista.especialidad}</p>
-                      </div>
-              
-                    </div>
-                  ))
-                }
-              </div>
-              
-            
-            <p class="font-bold text-azulprim p-4">Ver todos los especialistas.</p>
-        </div>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
+        <img
+          src="/about.webp"
+          alt="Nosotros"
+          class="rounded-2xl w-full max-w-xs md:max-w-md lg:max-w-sm"/>
+        <p class="text-justify text-base leading-relaxed lg:pr-6">
+          En <strong>Onix Dent</strong> creemos que una sonrisa saludable transforma
+          vidas. Por eso, nuestro equipo de odontólogos altamente capacitados trabaja
+          con tecnología avanzada y materiales de calidad para brindarte una experiencia
+          única, cálida y confiable en cada visita. ¡Queremos verte sonreír!
+        </p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="especialistas" class="bg-white">
+
+  <div class="py-8 px-14 text-center md:px-32">
+    <div class="animation">
+      <h1 class="text-2xl font-bold text-azulprim">Nuestros Especialistas</h1>
+      <p class="my-4">
+        Nuestro equipo de profesionales esta aqui para brindarte la atención
+        profesional que necesitas.
+      </p>
+    </div>
+
+    <div class="animation grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 p-4 sm:px-10">
+      {
+        destacados.map((especialista) => (
+          <div class="bg-gray-200 rounded-2xl shadow-md overflow-hidden flex flex-col items-center p-4 transition-transform hover:scale-105 duration-300">
+            {/* Imagen con proporción, padding y borde redondeado */}
+            <div class="w-full aspect-[3/4]">
+              <img
+                src={especialista.img}
+                alt="Especialista"
+                class="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+
+            {/* Nombre y especialidad */}
+            <div class="mt-4 text-center">
+              <h2 class="text-azulprim text-lg font-bold">
+                {especialista.nombre}
+              </h2>
+              <p class="text-gray-700 text-sm">{especialista.especialidad}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="text-center mt-6">
+      <a href="/especialistas" class="text-azulprim font-semibold hover:text-azuloscuro transition">
+        Ver todos los especialistas
+      </a>
+    </div>
+  </div>
 
 </section>
