@@ -2,6 +2,8 @@
 import '../styles/global.css'
 
 import Header from '../components/landing/Header.astro'
+import Location from '../components/landing/Location.astro'
+import Contact from '../components/landing/Contact.astro'
 import Footer from '../components/landing/Footer.astro'
 
 ---
@@ -29,10 +31,11 @@ import Footer from '../components/landing/Footer.astro'
 	<Header></Header>
 	
 	<slot></slot>
-
+	<Location></Location>
+	<Contact></Contact>
 	<Footer></Footer>	
 </body>
 
 </html>
-
+<script src="../scripts/scripts.js"></script>
 

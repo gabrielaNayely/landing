@@ -7,9 +7,9 @@ const destacados = especialistas.slice(0, 4)
 <section id="nosotros" class="bg-celesteprim">
 
   <div class="py-8 px-14 md:px-36">
-    <div class="animation text-center px-4 py-6">
+    <div class="text-center px-4 pb-6">
       <h1 class="text-2xl font-bold text-azulprim mb-4">NOSOTROS</h1>
-      <p class="text-base mb-6">
+      <p class="animacion animado text-base mb-6">
         Nuestro equipo está listo para recibirte con atención personalizada y
         profesional, porque tu sonrisa lo merece.
       </p>
@@ -18,8 +18,8 @@ const destacados = especialistas.slice(0, 4)
         <img
           src="/about.webp"
           alt="Nosotros"
-          class="rounded-2xl w-full max-w-xs md:max-w-md lg:max-w-sm"/>
-        <p class="text-justify text-base leading-relaxed lg:pr-6">
+          class="animacion animado rounded-2xl w-full max-w-xs md:max-w-md lg:max-w-sm"/>
+        <p class=" animacion animado text-justify text-base leading-relaxed lg:pr-6">
           En <strong>Onix Dent</strong> creemos que una sonrisa saludable transforma
           vidas. Por eso, nuestro equipo de odontólogos altamente capacitados trabaja
           con tecnología avanzada y materiales de calidad para brindarte una experiencia
@@ -35,18 +35,18 @@ const destacados = especialistas.slice(0, 4)
   <div class="py-8 px-14 text-center md:px-32">
     <div class="animation">
       <h1 class="text-2xl font-bold text-azulprim">Nuestros Especialistas</h1>
-      <p class="my-4">
+      <p class="animacion animado my-4">
         Nuestro equipo de profesionales esta aqui para brindarte la atención
         profesional que necesitas.
       </p>
     </div>
 
-    <div class="animation grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 p-4 sm:px-10">
+    <div class="flex flex-wrap justify-center gap-5">
       {
         destacados.map((especialista) => (
-          <div class="bg-gray-200 rounded-2xl shadow-md overflow-hidden flex flex-col items-center p-4 transition-transform hover:scale-105 duration-300">
+          <div class="animacion animado bg-gray-200 h-80 w-60 rounded-2xl shadow-md overflow-hidden flex flex-col items-center p-4 transition-transform hover:scale-105 duration-300">
             {/* Imagen con proporción, padding y borde redondeado */}
-            <div class="w-full aspect-[3/4]">
+            <div class="h-56 aspect-[3/4]">
               <img
                 src={especialista.img}
                 alt="Especialista"
@@ -56,7 +56,7 @@ const destacados = especialistas.slice(0, 4)
 
             {/* Nombre y especialidad */}
             <div class="mt-4 text-center">
-              <h2 class="text-azulprim text-lg font-bold">
+              <h2 class="text-azulprim font-bold">
                 {especialista.nombre}
               </h2>
               <p class="text-gray-700 text-sm">{especialista.especialidad}</p>
