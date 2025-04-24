@@ -1,0 +1,51 @@
+---
+import especialistas from "../../datos/especialistas.json";
+
+const destacados = especialistas.slice(0, 4)
+---
+
+<section id="especialistas" class="bg-white scroll-mt-10">
+
+    <div class="py-8 px-14 text-center md:px-32">
+      <div class="animation">
+        <h1 class="text-2xl font-bold text-azulprim">Nuestros Especialistas</h1>
+        <p class="animacion animado my-4">
+          Nuestro equipo de profesionales esta aqui para brindarte la atención
+          profesional que necesitas.
+        </p>
+      </div>
+  
+      <div class="flex flex-wrap justify-center gap-5">
+        {
+          destacados.map((especialista) => (
+            <div class="animacion animado bg-gray-200 h-80 w-60 rounded-2xl shadow-md overflow-hidden flex flex-col items-center p-4 transition-transform hover:scale-105 duration-300">
+              {/* Imagen con proporción, padding y borde redondeado */}
+              <div class="h-56 aspect-[3/4]">
+                <img
+                  src={especialista.img}
+                  alt="Especialista"
+                  class="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+  
+              {/* Nombre y especialidad */}
+              <div class="mt-4 text-center">
+                <h2 class="text-azulprim font-bold">
+                  {especialista.nombre}
+                </h2>
+                <p class="text-gray-700 text-sm">{especialista.especialidad}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+  
+      <div class="text-center mt-6">
+        <a href="/especialistas" class="text-azulprim font-semibold hover:text-azuloscuro transition">
+          Ver todos los especialistas
+        </a>
+      </div>
+    </div>
+  
+  </section>
+  
